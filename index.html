@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="/dist/output.css" rel="stylesheet" />
+</head>
+<style>
+  .justify-text {
+    text-align: justify !important;
+  }
+</style>
+
+<body class="bg-dark text-foreground relative">
+  <!-- Background decorative elements -->
+  <div class="bg-circles">
+    <div class="circle top-right"></div>
+    <div class="circle bottom-left"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen relative">
+    <div class="relative z-10 container mx-auto px-8 py-16">
+      <div class="flex flex-col lg:flex-row gap-16 min-h-screen items-center">
+        <!-- LEFT COLUMN -->
+        <div class="space-y-8 lg:ml-16 w-full lg:w-1/2 reveal">
+          <div class="space-y-7">
+            <h1 class="text-6xl lg:text-8xl font-bold tracking-tight">
+              <span class="text-white">Paul</span>
+              <span class="text-cyan-400">German</span>
+            </h1>
+            <h2 class="text-2xl text-gray-400 font-medium">
+              IT Student | Future QA & Software Developer
+            </h2>
+            <p class="text-lg text-gray-500 max-w-lg leading-relaxed justify-text">
+              I enjoy solving problems through code and ensuring software
+              quality with systematic testing. Currently learning new things
+              daily and seeking opportunities to contribute and grow.
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://drive.google.com/file/d/1-UruWh4n-TThr9KhKRzaoZtuoBHnSgXv/view?usp=sharing" target="_blank"
+              class="btn-resume group hover-glow">
+              <img src="/assets/icons/download.svg" alt="Resume"
+                class="w-5 h-5 mr-4 transition-transform duration-300 group-hover:animate-bounce" />
+              View Resume
+            </a>
+            <a href="" class="btn-projects group" id="btnProjects">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-5 h-5 mr-4 icon-pulse">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+              View Projects
+            </a>
+          </div>
+
+          <!-- Social Links -->
+          <div class="flex gap-4 pt-4 flex-nowrap min-w-0">
+            <a href="https://github.com/Paulololl" target="_blank" class="round-icons">
+              <img src="/assets/icons/github.svg" alt="GitHub" class="h-5 w-5" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/paul-bryan-german-354a76345/" target="_blank" class="round-icons">
+              <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="h-5 w-5" />
+            </a>
+
+            <a href="https://www.facebook.com/Paulll.German" target="_blank" class="round-icons">
+              <img src="/assets/icons/facebook.svg" alt="Email" class="h-5 w-5" style="color: white;" />
+            </a>
+
+            <button onclick="copyEmail()" class="btn-email group hover:cursor-pointer">
+              <img src="/assets/icons/mail.svg" alt="Email" class="h-5 w-5 ml-2 shrink-0" />
+              <span class="email-text">
+                Paulbryangerman@gmail.com
+              </span>
+            </button>
+
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="card-about w-full lg:w-1/2 mt-0 reveal">
+          <h3 class="text-2xl font-bold text-cyan-500 tracking-wide">ABOUT ME</h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            I'm a Bachelor of Science in Information Systems graduate at De La Salle-College of Saint Benilde,
+            passionate
+            about building reliable, well-structured software and ensuring its quality through systematic testing.
+          </p>
+          <p class="mt-4 text-gray-400 justify-text">
+            I enjoy working at the intersection of development and QA, solving problems through code while validating
+            that solutions perform as expected in real-world scenarios.
+          </p>
+          <p class="mt-4 text-gray-400 justify-text">
+            Currently, I'm continuously learning everyday and seeking opportunities where I can apply my knowledge, gain
+            exposure to industry
+            best practices, and continue growing as both a developer and a future quality assurance engineer.
+          </p>
+
+          <h4 class="mt-8 font-medium text-white uppercase tracking-wide mb-2">Core Skills</h4>
+          <div class="flex flex-wrap gap-2 mt-1 cursor-default">
+            <span class="pills">QA</span>
+            <span class="pills">Manual Testing</span>
+            <span class="pills">Automation Testing</span>
+            <span class="pills">Playwright</span>
+            <span class="pills">TypeScript</span>
+            <span class="pills">Python</span>
+            <span class="pills">Django</span>
+            <span class="pills">Adaptability</span>
+            <span class="pills">Detail Oriented</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Section -->
+  <section id="projects" class="min-h-screen relative">
+    <div class="relative z-10 container mx-auto px-8 py-16">
+      <h3 class="text-md font-semibold text-cyan-500 tracking-wide text-center mb-2">
+        MOST NOTABLE PROJECTS
+      </h3>
+      <p class="text-gray-400 text-center mb-10">Click the images to view them in full screen (can also swipe / drag)
+      </p>
+
+      <!-- BETWEEN: Card Left, Carousel Right -->
+      <div class="flex flex-col lg:flex-row gap-14 items-stretch mb-12 lg:p-8 sm:p-3">
+        <!-- Card -->
+        <div class="lg:w-1/2 flex reveal">
+          <div class="between-border flex-1">
+            <div class="between-border-content">
+              <div class="between-card">
+                <div>
+                  <h3 class="between-text">
+                    BETWEEN
+                  </h3>
+                  <p class="mt-4 text-gray-400 justify-text">
+                    Between is an internship matching platform connecting students with internship opportunities through
+                    an engaging, swipe-based interface similar to popular dating apps. Users can browse internships,
+                    filter by preferences, and quickly express interest in positions that match their skills, while the
+                    platform integrates user profiles, company listings, and skill-based matching algorithms.
+                  </p>
+                  <p class="mt-4 text-gray-400 justify-text">
+                    Companies can reach their ideal applicants easily, and interactive swiping mechanics make the
+                    experience intuitive and fun. This project emphasized responsive design and seamless database
+                    integration for stability and scalability, and the platform's innovative approach was recognized
+                    with an award for Best Paper Presentation in a research colloquium event.
+                  </p>
+                  <!-- <p class="mt-4 text-gray-400 justify-text">During development, the project emphasized responsive
+                    design and seamless database integration, ensuring both stability and scalability. The
+                    platform's research was recognized for its innovative approach and received an award for Best
+                    Paper
+                    Presentation in a research colloquium event.</p> -->
+                </div>
+                <div>
+                  <h4 class="mt-8 text-sm font-medium text-white uppercase tracking-wide">Tech Stack / Frameworks</h4>
+                  <div class="flex flex-wrap gap-2 mt-3 cursor-default">
+                    <span class="between-pill-border"><span class="between-pills">React.js</span></span>
+                    <span class="between-pill-border"><span class="between-pills">Tailwind CSS</span></span>
+                    <span class="between-pill-border"><span class="between-pills">Python</span></span>
+                    <span class="between-pill-border"><span class="between-pills">Django</span></span>
+                    <span class="between-pill-border"><span class="between-pills">MySQL</span></span>
+                    <span class="between-pill-border"><span class="between-pills">AWS S3</span></span>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <a class="btn-projects-link-disabled" target="_blank" disabled
+                    title="This project is not yet accessible">
+                    View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="lg:w-1/2 relative flex reveal">
+          <div class="carousel relative overflow-hidden rounded-lg flex-1 group" data-autoplay="true">
+            <div
+              class="carousel-track flex transition-transform duration-500 w-full h-full touch-pan-y hover:cursor-pointer">
+              <!-- User Accounts -->
+              <img src="/assets/between/user_account/user_accounts_1.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/user_account/user_accounts_2.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Between-applicantsignup.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/user_account/user_accounts_5.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/user_account/user_accounts_6.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/user_account/user_accounts_7.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <!-- Matching Module -->
+              <img src="/assets/between/matching_module/matching_module_1.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/matching_module/matching_module_2.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/matching_module/matching_module_3.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/matching_module/matching_module_4.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/matching_module/matching_module_5.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/matching_module/matching_module_6.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <!-- Application Module -->
+              <img src="/assets/between/application module/application_module_1.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/application module/application_module_2.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/application module/application_module_3.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <!-- Coordinator Module -->
+              <img src="/assets/between/coordinator_module/ojtcoordinator_module_1.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/coordinator_module/ojtcoordinator_module_2.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/coordinator_module/ojtcoordinator_module_3.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/coordinator_module/ojtcoordinator_module_4.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <!-- CEA Module -->
+              <img src="/assets/between/cea_module/cea_module_1.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/cea_module/cea_module_2.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/cea_module/cea_module_3.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/cea_module/cea_module_4.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/between/cea_module/cea_module_5.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+            </div>
+            <button class="carousel-Larrow carousel-prev">&lt;</button>
+            <button class="carousel-Rarrow carousel-next">&gt;</button>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- GOOGLE SITES: Carousel Left, Card Right -->
+      <div class="flex flex-col lg:flex-row-reverse gap-14 items-stretch mb-12 lg:p-8 sm:p-3">
+        <div class="card lg:w-1/2 reveal">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-500 tracking-wide">BARANGAY 756 WEBSITE</h3>
+            <p class="mt-4 text-gray-400 justify-text">
+              The Barangay 756 website is an ongoing project that serves as a central hub for residents to access
+              community services,
+              announcements, and local programs. It provides quick access to essential resources such as hotlines,
+              consultations, and financial reports, while prioritizing transparency and user engagement through tools
+              for submitting inquiries, scheduling appointments, and staying updated on initiatives.
+            </p>
+            <p class="mt-4 text-gray-400 justify-text">
+              The platform is designed for accessibility, ensuring easy navigation for all users. Development focused on
+              creating a reliable, responsive website with clear navigation, real-time updates, and seamless content
+              management, delivering a functional and community-focused online information system for Barangay 756.
+            </p>
+
+          </div>
+          <div>
+            <h4 class="mt-8 text-sm font-medium text-white uppercase tracking-wide">TECH STACK / METHODOLOGY</h4>
+            <div class="flex flex-wrap gap-2 mt-3 cursor-default">
+              <span class="pills">Google Sites</span>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="https://sites.google.com/benilde.edu.ph/barangay756" class="btn-projects-link hover-glow-2"
+              target="_blank">
+              View Project</a>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="lg:w-1/2 relative flex reveal">
+          <div class="carousel relative overflow-hidden rounded-lg flex-1 group" data-autoplay="true">
+            <div
+              class="carousel-track flex transition-transform duration-500 w-full h-full touch-pan-y hover:cursor-pointer">
+              <img src="/assets/images/BRGY 756 Homepage.png"
+                class="w-full h-full object-contain cover-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/BRGY 756 Mission Vision.png"
+                class="w-full h-full object-contain cover-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/BRGY 756 Quick Access.png"
+                class="w-full h-full object-contain cover-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/BRGY 756 Hotlines.png"
+                class="w-full h-full object-contain cover-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/BRGY 756 Treasurers Report 1.png"
+                class="w-full h-full object-contain cover-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/BRGY 756 Treasurers Report 2.png"
+                class="w-full h-full object-contain cover-lg flex-shrink-0" draggable="false" />
+            </div>
+            <button class="carousel-Larrow carousel-prev">&lt;</button>
+            <button class="carousel-Rarrow carousel-next">&gt;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eduscore: Card Left, Carousel Right -->
+      <div class="flex flex-col lg:flex-row gap-14 items-stretch mb-12 lg:p-8 sm:p-3">
+        <div class="card lg:w-1/2 reveal">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-500 tracking-wide">EDUSCORE</h3>
+            <p class="mt-4 text-gray-400 justify-text">
+              A group project focused on developing a modernized version of Benilde’s LATCH (Learner’s Assessment of
+              Teaching Learning and Courseware in a Hybrid Environment) evaluation system. The platform was designed to
+              improve the evaluation experience through a cleaner interface, more efficient workflows, and better
+              usability for students and faculty.
+            </p>
+            <p class="mt-4 text-gray-400 justify-text">
+              Built using Python, Django, and Tailwind CSS, the project emphasized both backend functionality and user
+              experience. Features included evaluation form management, account-based access, and organized data
+              handling to support a smoother and more efficient evaluation process.
+            </p>
+            <p class="mt-4 text-gray-400 justify-text">
+              This project also marked my first experience in project management and collaborative team development,
+              where I learned how to work effectively within a team environment, manage tasks, and contribute to the
+              overall development lifecycle of a software project.
+            </p>
+          </div>
+          <div>
+            <h4 class="mt-8 text-sm font-medium text-white uppercase tracking-wide">TECH STACK / FRAMEWORK</h4>
+            <div class="flex flex-wrap gap-2 mt-3 cursor-default">
+              <span class="pills">JavaScript</span>
+              <span class="pills">Tailwind CSS</span>
+              <span class="pills">Python</span>
+              <span class="pills">Django</span>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a class="btn-projects-link-disabled" target="_blank" disabled title="This project is not yet accessible">
+              View Project</a>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="lg:w-1/2 relative flex reveal">
+          <div class="carousel relative overflow-hidden rounded-lg flex-1 group" data-autoplay="true">
+            <div
+              class="carousel-track flex transition-transform duration-500 w-full h-full touch-pan-y hover:cursor-pointer">
+              <img src="/assets/images/Eduscore Landing page.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore HomePageLogout.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore Login.png" class="w-full h-full object-contain rounded-lg flex-shrink-0"
+                draggable="false" />
+              <img src="/assets/images/Eduscore ProfProfile1.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore ProfProfile2.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore ProfProfile3.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore ProfProfile4.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore RateProf_Tags.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore RateProf.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore RateProf2.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore RateProf3.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Eduscore Bookmarks.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+            </div>
+            <button class="carousel-Larrow carousel-prev">&lt;</button>
+            <button class="carousel-Rarrow carousel-next">&gt;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book Ordering Web App: Carousel Left, Card Right -->
+      <div class="flex flex-col lg:flex-row-reverse gap-14 items-stretch mb-12 lg:p-8 sm:p-3">
+        <div class="card lg:w-1/2 reveal">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-500 tracking-wide">BOOK ORDERING WEB APP</h3>
+            <p class="mt-4 text-gray-400 justify-text">
+              This is one of my first django projects that allows users to browse and order physical books online,
+              featuring product
+              catalogs, account-based carts, and multi-item ordering. Users can efficiently add books to their cart,
+              review selections, and manage orders.
+            </p>
+            <p class="mt-4 text-gray-400 justify-text">
+              The system tracks order statuses, sends email notifications, and ensures a smooth, secure shopping
+              experience. Built with Python and Django, it emphasizes functionality and usability, providing a robust,
+              user-friendly platform for book sales and order tracking.
+            </p>
+            <p class="mt-4 text-gray-400 justify-text">
+              Note: This project was developed during my junior years, so it may not be perfect in terms of UI/UX and is
+              not mobile-responsive. The focus is primarily on backend logic, transactions, and database relationships.
+            </p>
+          </div>
+          <div>
+            <h4 class="mt-8 text-sm font-medium text-white uppercase tracking-wide">TECH STACK / FRAMEWORK</h4>
+            <div class="flex flex-wrap gap-2 mt-3 cursor-default">
+              <span class="pills">Python</span>
+              <span class="pills">Django</span>
+              <span class="pills">CSS</span>
+              <span class="pills">Bootstrap</span>
+            </div>
+          </div>
+          <div class="mt-8">
+            <a href="https://paulbryangerman.pythonanywhere.com/" class="btn-projects-link hover-glow-2"
+              target="_blank">
+              View Project</a>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="lg:w-1/2 relative flex reveal">
+          <div class="carousel relative overflow-hidden rounded-lg flex-1 group" data-autoplay="true">
+            <div
+              class="carousel-track flex transition-transform duration-500 w-full h-full touch-pan-y hover:cursor-pointer">
+              <img src="/assets/images/Bookstore homepage.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Bookstore Login.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Bookstore Signup.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Bookstore browse.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Bookstore shoppingcart.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Bookstore checkout.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Bookstore orders.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+              <img src="/assets/images/Bookstore order details.png"
+                class="w-full h-full object-contain rounded-lg flex-shrink-0" draggable="false" />
+            </div>
+            <button class="carousel-Larrow carousel-prev">&lt;</button>
+            <button class="carousel-Rarrow carousel-next">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Section -->
+  <section id="projects" class="min-h-screen relative mt-20">
+    <div class="relative z-10 container mx-auto px-8 py-16">
+      <h3 class="text-md font-semibold text-cyan-500 tracking-wide text-center mb-2">
+        Work Experience
+      </h3>
+      <p class="text-gray-400 text-center mb-10">Below are my key takeaways for the internship at
+        <a href="https://wizy.io/" target="_blank" class="wizytext">wizy.io</a>
+      </p>
+
+      <div class="flex flex-col gap-16 lg:gap-8">
+        <!-- 1st row -->
+        <div class="flex flex-col lg:flex-row gap-16 items-stretch lg:p-8 sm:p-3 reveal">
+          <div class="card lg:w-1/3 items-center justify-center">
+            <img src="/assets/icons/manual-testing.svg" class="size-32 text-white" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Manual Testing</h3>
+            <p class="mt-2 text-gray-400 justify-text">I have learned about Manual Testing the most during my
+              internship. My key takeaway for this is Consistency, Repetition, and Attention to Detail. If you have or
+              possess any
+              of these three aspects, then Manual Testing is for you.</p>
+          </div>
+          <div class=" card lg:w-1/3 relative flex items-center justify-center">
+            <img src="/assets/icons/automation-testing.svg" class="size-32 text-white" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Automation Testing</h3>
+            <p class="mt-2 text-gray-400 justify-text">I had an easier time transitioning to Automation since I came
+              from Manual Testing. My key takeaway for this
+              is you must be process oriented and have a good understanding of the tools and languages used for
+              automation.</p>
+          </div>
+          <div class=" card lg:w-1/3 relative flex items-center justify-center">
+            <img src="/assets/icons/testing.svg" class="size-32 text-white" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Testing in General</h3>
+            <p class="mt-2 text-gray-400 justify-text">I learned a lot about testing in general during my internship. My
+              key takeaway for this is that testing is not just about finding bugs and documenting them, but also
+              ensuring
+              the quality and reliability of the software in real-world use.</p>
+          </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="flex flex-col relative lg:flex-row gap-16 items-stretch lg:p-8 sm:p-3 reveal">
+          <div class="card lg:w-1/3 items-center justify-center">
+            <img src="/assets/icons/bugreport.svg" class="size-32 text-white" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Bug Reports</h3>
+            <p class="mt-2 text-gray-400 justify-text">My key takeaway for Bug Reports is that they must be clear,
+              concise, and include all necessary information / environment to reproduce the issue.</p>
+          </div>
+          <div class=" card lg:w-1/3 relative flex items-center justify-center">
+            <img src="/assets/icons/scrum-task-board.svg" class="size-32 text-white" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Agile Scrum</h3>
+            <p class="mt-2 text-gray-400 justify-text">My key takeaway for Agile Scrum is that it promotes
+              teamwork, communication, and continuous improvement through iterative development cycles.</p>
+          </div>
+          <div class=" card lg:w-1/3 relative flex items-center justify-center">
+            <img src="/assets/icons/jira.svg" class="size-32 text-white" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Jira Tickets</h3>
+            <p class="mt-2 text-gray-400 justify-text">My key takeaway for this is that they are similar to to-do lists,
+              but more detailed and organized, helping teams track progress and manage tasks effectively.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Job Description -->
+      <div class="flex flex-col lg:flex-row gap-14 items-stretch lg:p-8 sm:p-3 mt-8">
+        <div class="card lg:w-1/2 reveal">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-500 tracking-wide">JOB DESCRIPTION</h3>
+            <p class="mt-4 text-gray-400 justify-text">During my time as a Quality Assurance Intern at Wizy, I was
+              introduced to the company’s culture and values through a welcoming and structured onboarding process. I
+              quickly became familiar with manual testing practices, learning how to perform Smoke and Regression Tests
+              for every new release to ensure the platform’s stability and reliability.
+            </p>
+
+            <p class="mt-4 text-gray-400 justify-text">As I gained experience in manual testing, I also volunteered to
+              participate in Automation Testing. After completing the automation onboarding, I was able to translate
+              some of the manual test cases I had been performing into automated scripts, helping to streamline testing
+              processes and improve overall efficiency. This allowed me to contribute more effectively to the QA team
+              while expanding my technical skill set.
+            </p>
+
+            <p class="mt-4 text-gray-400 justify-text">Throughout my internship, I collaborated closely with the team
+              and our supervisors to identify issues, provide meaningful feedback, and support the release of
+              high-quality software. This experience not only strengthened my testing skills but also gave me a deeper
+              understanding of how QA drives product excellence within a dynamic and innovative company.
+            </p>
+
+            <!-- <p class="mt-4 text-gray-400 justify-text italic">Disclaimer: The QA test plans and bug report samples shown
+              were
+              created by us interns using internally developed templates and have been anonymized to protect
+              confidentiality.
+            </p> -->
+
+          </div>
+          <div>
+            <h4 class="mt-8 text-sm font-medium text-white uppercase tracking-wide">KEYWORDS</h4>
+            <div class="flex flex-wrap gap-2 mt-3 cursor-default">
+              <span class="pills">Manual Testing</span>
+              <span class="pills">Automation Testing</span>
+              <span class="pills">Agile Scrum</span>
+              <span class="pills">Bug Reporting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <div class="lg:w-1/2 relative flex reveal">
+          <div class="carousel relative overflow-hidden rounded-lg flex-1 group" data-autoplay="true">
+            <div
+              class="carousel-track flex transition-transform duration-500 w-full h-full touch-pan-y hover:cursor-pointer">
+              <img src="/assets/images/Test Plan blurred.png"
+                class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
+              <img src="/assets/images/Bug Report blurred.png"
+                class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
+              <img src="/assets/images/Automation Testing.png"
+                class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
+              <img src="/assets/images/Playwright test report sample.png"
+                class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
+              <img src="/assets/images/Meetings blurred.png" class="w-full h-full object-contain cover-lg shrink-0"
+                draggable="false" />
+            </div>
+            <button class="carousel-Larrow carousel-prev">&lt;</button>
+            <button class="carousel-Rarrow carousel-next">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Reflections on College Life -->
+  <!-- <section id="projects" class="min-h-screen relative mt-20">
+    <div class="relative z-10 container mx-auto px-8 py-16">
+      <h3 class="text-md font-semibold text-cyan-500 tracking-wide text-center mb-2">
+        Reflections on College Life
+      </h3>
+      <p class="text-gray-400 text-center mb-10">Things that I learned from my time in Benilde and my Goals in life</p>
+
+      <div class="flex flex-col gap-16 lg:gap-8">
+        1st row
+        <div class="flex flex-col lg:flex-row gap-20 items-stretch lg:p-8 sm:p-3 reveal">
+          <div class="card lg:w-1/2 items-center justify-center lg:ml-16">
+            <img src="assets/images/college.svg" class="size-40" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Learnings in College</h3>
+            <p class="mt-2 text-gray-400 justify-text">I have learned so much during my time here in DLS-CSB, especially
+              during our CAPSTONE / Thesis project that lasted for 3 terms. I learned what it means to do things
+              extraordinarily well.
+              It means that you do things beyond the task that was given to you, to the best of your abilities. After
+              finishing the thesis, it feels like everything I did in my internship was much easier compared to it.</p>
+          </div>
+          <div class="card lg:w-1/2 relative flex items-center justify-center lg:mr-16">
+            <img src="assets/images/timeline.svg" class="size-40" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Next Steps</h3>
+            <p class="mt-2 text-gray-400 justify-text">The next steps I would take after graduating from college is to
+              take a long break first and spend more time with myself and my family. I will still keep up the habit of
+              studying everyday,
+              to make sure that I stay sharp and continue growing both as a professional in my career and as a person. I
+              also want to use this time to plan out my future properly and live the life that I want.</p>
+          </div>
+        </div>
+        2nd row
+        <div class="flex flex-col relative lg:flex-row gap-20 items-stretch lg:p-8 sm:p-3 reveal">
+          <div class="card lg:w-1/2 items-center justify-center lg:ml-16">
+            <img src="assets/images/career.svg" class="size-40" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Career Goals</h3>
+            <p class="mt-2 text-gray-400 justify-text">I currently have 2 career goals in mind, and that is being a
+              Quality Assurance Engineer and a Software Developer. What I plan to do is I would apply for the QA
+              Engineer position first, and I will study everyday to also become a Software Developer. These two roles
+              are
+              actually connected with each other, based from my experience. I also want to have more options and
+              opportunities.</p>
+          </div>
+          <div class=" card lg:w-1/2 relative flex items-center justify-center lg:mr-16">
+            <img src="assets/images/personal.svg" class="size-40" />
+            <h3 class="text-sm font-semibold text-white mt-2 uppercase">Personal Goals</h3>
+            <p class="mt-2 text-gray-400 justify-text">The first goal I have in mind is to be financially independent.
+              When I get my first paycheck, I plan to treat my parents outside to repay them back for everything that
+              they have done for me. I also have plans for myself in the future that I want to achieve. I guess my
+              personal goal in general is to live my life the way I want it to be, and to be able to say that I am
+              satisfied with this life.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <script src="/main.js"></script>
+</body>
+
+<!-- Resume Modal -->
+<!-- <div id="resumeModal"
+  class="fixed inset-0 bg-black/50 flex items-center justify-center opacity-0 scale-95 pointer-events-none z-50 transition-all duration-300 ease-out">
+  <div class="bg-card border border-cyan-950 rounded-lg shadow
+          max-w-2xl w-full relative p-5 transform transition-all duration-300 ease-out">
+    <button id="closeModal" class="absolute top-2 right-2 text-gray-100 hover:text-cyan-500">&times;</button>
+
+    <img src="/assets/images/Paul German Resume.png" class="max-w-full max-h-[92vh] mx-auto rounded-sm object-contain"
+      frameborder="0" />
+  </div>
+</div> -->
+
+<!-- Image Modal -->
+<div id="image-modal" class="fixed inset-0 bg-black/80 flex items-center justify-center
+         opacity-0 scale-95 pointer-events-none
+         transition-all duration-300 ease-out z-50">
+
+  <button id="modal-close" class="absolute top-4 right-4 text-white text-4xl hover:text-cyan-500">
+    &times;
+  </button>
+
+  <img id="modal-image" src="" class="max-w-[90%] max-h-[90%] rounded-lg shadow-lg
+           transform transition-all duration-300 ease-out scale-95" />
+</div>
+
+</html>

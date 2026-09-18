@@ -1,0 +1,20 @@
+{
+  "name": "german-portfolio-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./styles.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./styles.css -o ./dist/output.css"
+  },
+
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}
