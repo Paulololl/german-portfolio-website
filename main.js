@@ -237,38 +237,97 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.copyEmail = function () {
-  const email = "Paulbryangerman@gmail.com";
-  const button = event.currentTarget;
-  const textSpan = button.querySelector(".email-text");
+    const email = "Paulbryangerman@gmail.com";
+    const button = event.currentTarget;
+    const textSpan = button.querySelector(".email-text");
 
-  if (button.dataset.copied === "true") return;
+    if (button.dataset.copied === "true") return;
 
-  navigator.clipboard.writeText(email).then(() => {
-    const originalText = textSpan.textContent;
-    button.dataset.copied = "true";
+    navigator.clipboard.writeText(email).then(() => {
+      const originalText = textSpan.textContent;
+      button.dataset.copied = "true";
 
-    // Slide left + fade out
-    textSpan.style.transform = "translateX(-8px)";
-    textSpan.style.opacity = "0";
-
-    setTimeout(() => {
-      textSpan.textContent = "Email copied to clipboard!";
-      textSpan.style.transform = "translateX(0)";
-      textSpan.style.opacity = "1";
-    }, 200);
-
-    // Revert after 3s
-    setTimeout(() => {
+      // Slide left + fade out
       textSpan.style.transform = "translateX(-8px)";
       textSpan.style.opacity = "0";
 
       setTimeout(() => {
-        textSpan.textContent = originalText;
+        textSpan.textContent = "Email copied to clipboard!";
         textSpan.style.transform = "translateX(0)";
         textSpan.style.opacity = "1";
-        button.dataset.copied = "false";
       }, 200);
-    }, 3000);
+
+      // Revert after 3s
+      setTimeout(() => {
+        textSpan.style.transform = "translateX(-8px)";
+        textSpan.style.opacity = "0";
+
+        setTimeout(() => {
+          textSpan.textContent = originalText;
+          textSpan.style.transform = "translateX(0)";
+          textSpan.style.opacity = "1";
+          button.dataset.copied = "false";
+        }, 200);
+      }, 3000);
+    });
+  };
+
+  /* =============================
+     Keyword Card Modal
+  ============================== */
+  const keywordModal = document.getElementById("keyword-modal");
+  const keywordModalClose = document.getElementById(
+    "keyword-modal-close",
+  );
+  const keywordButtons = document.querySelectorAll(".keyword-btn");
+  const keywordCards = document.querySelectorAll(".keyword-card");
+
+  function openKeywordModal(keyword) {
+    keywordCards.forEach((card) => {
+      if (card.dataset.keywordCard === keyword) {
+        card.classList.remove("hidden");
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+
+    keywordModal.classList.remove(
+      "opacity-0",
+      "scale-95",
+      "pointer-events-none",
+    );
+
+    keywordModal.classList.add("opacity-100", "scale-100");
+  }
+
+  function closeKeywordModal() {
+    keywordModal.classList.add(
+      "opacity-0",
+      "scale-95",
+      "pointer-events-none",
+    );
+
+    keywordModal.classList.remove("opacity-100", "scale-100");
+  }
+
+  keywordButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const keyword = button.dataset.keyword;
+      openKeywordModal(keyword);
+    });
   });
-};
+
+  keywordModalClose?.addEventListener("click", closeKeywordModal);
+
+  keywordModal?.addEventListener("click", (e) => {
+    if (e.target === keywordModal) {
+      closeKeywordModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeKeywordModal();
+    }
+  });
 });

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width" />
   <title>My Portfolio</title>
   <link href="/dist/output.css" rel="stylesheet" />
 </head>
@@ -445,15 +445,17 @@
       <h3 class="text-md font-semibold text-cyan-500 tracking-wide text-center mb-2">
         WORK EXPERIENCE
       </h3>
-      <p class="text-gray-400 text-center mb-10">My work experience since graduating from college
+      <p class="text-gray-400 text-center mb-10">My work experience since graduating from college (Keywords are
+        clickable)
       </p>
 
-      <!-- Job Description -->
+      <!-- WIZY.IO -->
       <div class="flex flex-col lg:flex-row gap-14 items-stretch lg:p-8 sm:p-3 mt-8">
         <div class="card lg:w-1/2 reveal">
           <div>
             <h3 class="text-2xl font-bold text-cyan-500 tracking-wide">
-            <a href="https://wizy.io/" target="_blank" class="text-cyan-500 hover:underline">WIZY.IO</a></h3>
+              <a href="https://wizy.io/" target="_blank" class="text-cyan-500 hover:underline">WIZY.IO</a>
+            </h3>
             <p class="mt-4 text-gray-400 justify-text">During my time as a Quality Assurance Intern at Wizy, I was
               introduced to the company’s culture and values through a welcoming and structured onboarding process. I
               quickly became familiar with manual testing practices, learning how to perform Smoke and Regression Tests
@@ -482,11 +484,30 @@
           </div>
           <div>
             <h4 class="mt-8 text-sm font-medium text-white uppercase tracking-wide">KEYWORDS</h4>
-            <div class="flex flex-wrap gap-2 mt-3 cursor-default">
-              <span class="pills">Manual Testing</span>
-              <span class="pills">Automation Testing</span>
-              <span class="pills">Agile Scrum</span>
-              <span class="pills">Bug Reporting</span>
+            <div class="flex flex-wrap gap-2 mt-3">
+              <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="manual-testing">
+                Manual Testing
+              </button>
+
+              <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="automation-testing">
+                Automation Testing
+              </button>
+
+              <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="agile-scrum">
+                Agile Scrum
+              </button>
+
+              <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="bug-reports">
+                Bug Reporting
+              </button>
+
+              <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="testing-general">
+                Testing in General
+              </button>
+
+              <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="jira-tickets">
+                Jira Tickets
+              </button>
             </div>
           </div>
         </div>
@@ -496,12 +517,12 @@
           <div class="carousel relative overflow-hidden rounded-lg flex-1 group" data-autoplay="true">
             <div
               class="carousel-track flex transition-transform duration-500 w-full h-full touch-pan-y hover:cursor-pointer">
-              <img src="/assets/images/Test Plan blurred.png"
-                class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
-              <img src="/assets/images/Bug Report blurred.png"
-                class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
-              <img src="/assets/images/Automation Testing.png"
-                class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
+              <img src="/assets/images/Test Plan blurred.png" class="w-full h-full object-contain cover-lg shrink-0"
+                draggable="false" />
+              <img src="/assets/images/Bug Report blurred.png" class="w-full h-full object-contain cover-lg shrink-0"
+                draggable="false" />
+              <img src="/assets/images/Automation Testing.png" class="w-full h-full object-contain cover-lg shrink-0"
+                draggable="false" />
               <img src="/assets/images/Playwright test report sample.png"
                 class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
               <img src="/assets/images/Meetings blurred.png" class="w-full h-full object-contain cover-lg shrink-0"
@@ -513,9 +534,10 @@
         </div>
       </div>
 
-    <div class="flex flex-col gap-16 lg:gap-8 mt-4">
-      <!-- 1st row -->
-      <div class="flex flex-col lg:flex-row gap-16 items-stretch lg:p-8 sm:p-3 reveal">
+      <div class="flex flex-col gap-16 lg:gap-8 mt-4">
+
+        <!-- 1st row -->
+        <!-- <div class="flex flex-col lg:flex-row gap-16 items-stretch lg:p-8 sm:p-3 reveal">
         <div class="card lg:w-1/3 items-center justify-center">
           <img src="/assets/icons/manual-testing.svg" class="size-32 text-white" />
           <h3 class="text-sm font-semibold text-white mt-2 uppercase">Manual Testing</h3>
@@ -540,9 +562,9 @@
             ensuring
             the quality and reliability of the software in real-world use.</p>
         </div>
-      </div>
-      <!-- 2nd row -->
-      <div class="flex flex-col relative lg:flex-row gap-16 items-stretch lg:p-8 sm:p-3 reveal">
+      </div> -->
+        <!-- 2nd row -->
+        <!-- <div class="flex flex-col relative lg:flex-row gap-16 items-stretch lg:p-8 sm:p-3 reveal">
         <div class="card lg:w-1/3 items-center justify-center">
           <img src="/assets/icons/bugreport.svg" class="size-32 text-white" />
           <h3 class="text-sm font-semibold text-white mt-2 uppercase">Bug Reports</h3>
@@ -563,7 +585,85 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
+
+        <!-- NTT DATA PAYMENT SERVICES -->
+        <div class="flex flex-col lg:flex-row-reverse gap-14 items-stretch lg:p-8 sm:p-3 mt-8">
+          <div class="card lg:w-1/2 reveal">
+            <div>
+              <h3 class="text-2xl font-bold text-cyan-500 tracking-wide">
+                <a href="https://ph.nttdatapay.com/en" target="_blank" class="text-cyan-500 hover:underline">NTT DATA
+                  PAYMENT SERVICES</a>
+              </h3>
+              <p class="mt-4 text-gray-400 justify-text">During my time as an Executive, Quality Assurance at NTT DATA
+                Payment Services, I was responsible for performing Functional and Regression Testing on POS terminals to
+                verify their functionality and configurations. I developed and followed a structured test case and
+                checklist to systematically test each terminal, covering different terminal functions and ensuring
+                consistent test coverage throughout the project.
+              </p>
+
+              <p class="mt-4 text-gray-400 justify-text">As the project progressed, I tested a total of 649 POS
+                terminals while keeping track of their testing status and related information through a database that I
+                created and maintained. This allowed me to organize the testing process and ensure that each terminal
+                was properly tested according to the established requirements, including checking terminal versions and
+                configurations when necessary.
+              </p>
+
+              <p class="mt-4 text-gray-400 justify-text">Throughout the project, I maintained accuracy and consistency
+                while handling the testing of all 649 POS terminals. I also participated in client callouts, contacting
+                customers through phone calls and text messages regarding their POS terminals. This experience
+                strengthened my ability to work systematically, pay attention to detail, and communicate effectively
+                while carrying out QA responsibilities in a project-based environment.
+              </p>
+
+              <!-- <p class="mt-4 text-gray-400 justify-text italic">Disclaimer: The QA test plans and bug report samples shown
+            were
+            created by us interns using internally developed templates and have been anonymized to protect
+            confidentiality.
+          </p> -->
+
+            </div>
+            <div>
+              <h4 class="mt-8 text-sm font-medium text-white uppercase tracking-wide">KEYWORDS</h4>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="functional-testing">
+                  Functional Testing
+                </button>
+
+                <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="regression-testing">
+                  Regression Testing
+                </button>
+
+                <button class="pills-2 keyword-btn hover:cursor-pointer" data-keyword="test-case-creation">
+                  Test Case Creation
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel -->
+          <div class="lg:w-1/2 relative flex reveal mb-12">
+            <div class="carousel relative overflow-hidden rounded-lg flex-1 group" data-autoplay="true">
+              <div
+                class="carousel-track flex transition-transform duration-500 w-full h-full touch-pan-y hover:cursor-pointer">
+                <img src="/assets/images/NTT POS TCSpng.png" class="w-full h-full object-contain cover-lg shrink-0"
+                  draggable="false" />
+                <img src="/assets/images/NTT POS Summary.png" class="w-full h-full object-contain cover-lg shrink-0"
+                  draggable="false" />
+                <img src="/assets/images/NTT POS All Terminals.png"
+                  class="w-full h-full object-contain cover-lg shrink-0" draggable="false" />
+                <img src="/assets/images/NTT Callout Summary.png" class="w-full h-full object-contain cover-lg shrink-0"
+                  draggable="false" />
+                <img src="/assets/images/NTT SRs.png" class="w-full h-full object-contain cover-lg shrink-0"
+                  draggable="false" />
+                <img src="/assets/images/NTT SRs All.png" class="w-full h-full object-contain cover-lg shrink-0"
+                  draggable="false" />
+              </div>
+              <button class="carousel-Larrow carousel-prev">&lt;</button>
+              <button class="carousel-Rarrow carousel-next">&gt;</button>
+            </div>
+          </div>
+
   </section>
 
   <!-- Reflections on College Life -->
@@ -622,6 +722,161 @@
     </div>
   </section> -->
 
+  <!-- Keyword Modal -->
+  <div id="keyword-modal" class="fixed inset-0 z-70 flex items-center justify-center bg-black/70 p-6
+         opacity-0 scale-95 pointer-events-none transition-all duration-300">
+
+    <div class="relative w-full max-w-xl max-h-[90vh] overflow-y-auto">
+
+      <!-- Close Button -->
+      <button id="keyword-modal-close" class="absolute top-4 right-4 z-10 bg-black/60 text-white
+             rounded-full w-10 h-10 text-xl hover:bg-cyan-500
+             hover:text-black transition duration-200">
+        &times;
+      </button>
+
+      <!-- Manual Testing -->
+      <div class="keyword-card" data-keyword-card="manual-testing">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/manual-testing.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Manual Testing
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            I have learned about Manual Testing the most during my
+            internship. My key takeaway for this is Consistency,
+            Repetition, and Attention to Detail. If you have or
+            possess any of these three aspects, then Manual Testing is for you.
+          </p>
+        </div>
+      </div>
+
+      <!-- Automation Testing -->
+      <div class="keyword-card" data-keyword-card="automation-testing">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/automation-testing.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Automation Testing
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            I had an easier time transitioning to Automation since I came
+            from Manual Testing. My key takeaway for this is you must be
+            process oriented and have a good understanding of the tools
+            and languages used for automation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Testing in General -->
+      <div class="keyword-card" data-keyword-card="testing-general">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/testing.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Testing in General
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            I learned a lot about testing in general during my internship.
+            My key takeaway for this is that testing is not just about
+            finding bugs and documenting them, but also ensuring the
+            quality and reliability of the software in real-world use.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bug Reports -->
+      <div class="keyword-card" data-keyword-card="bug-reports">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/bugreport.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Bug Reports
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            My key takeaway for Bug Reports is that they must be clear,
+            concise, and include all necessary information / environment
+            to reproduce the issue.
+          </p>
+        </div>
+      </div>
+
+      <!-- Agile Scrum -->
+      <div class="keyword-card" data-keyword-card="agile-scrum">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/scrum-task-board.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Agile Scrum
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            My key takeaway for Agile Scrum is that it promotes
+            teamwork, communication, and continuous improvement through
+            iterative development cycles.
+          </p>
+        </div>
+      </div>
+
+      <!-- Jira Tickets -->
+      <div class="keyword-card" data-keyword-card="jira-tickets">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/jira.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Jira Tickets
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            My key takeaway for this is that they are similar to to-do
+            lists, but more detailed and organized, helping teams track
+            progress and manage tasks effectively.
+          </p>
+        </div>
+      </div>
+
+      <!-- Functional Testing -->
+      <div class="keyword-card" data-keyword-card="functional-testing">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/functional-testing.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Functional Testing
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            I performed Functional Testing on POS terminals to verify their functionality and configurations.
+            I developed and followed a structured test case and checklist to systematically test each terminal,
+            covering different terminal functions and ensuring consistent test coverage throughout the project.
+          </p>
+        </div>
+      </div>
+
+      <!-- Regression Testing -->
+      <div class="keyword-card" data-keyword-card="regression-testing">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/regression-testing.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Regression Testing
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            I also performed Regression Testing on a total of 649 POS terminals while keeping track of
+            their testing status and related information through a database that I created and maintained.
+            This allowed me to organize the testing process and ensure that each terminal was
+            properly tested according to the established requirements, including checking terminal
+            versions and configurations when necessary.
+          </p>
+        </div>
+      </div>
+
+      <!-- Test Case Creation -->
+      <div class="keyword-card" data-keyword-card="test-case-creation">
+        <div class="card items-center justify-center">
+          <img src="/assets/icons/test-case-creation.svg" class="size-32 text-white" />
+          <h3 class="text-sm font-semibold text-white mt-2 uppercase">
+            Test Case Creation
+          </h3>
+          <p class="mt-4 text-gray-400 justify-text">
+            Since there was no official step by step process on how to test the POS terminals,
+            I created Test Cases and Checklists to systematically test each of them,
+            to ensure that all of the POS terminals that I tested were done in a structured and consistent manner.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <script src="/main.js"></script>
 </body>
